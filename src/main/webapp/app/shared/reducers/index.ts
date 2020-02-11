@@ -11,6 +11,30 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import timeSeriesDataPoint, {
+  TimeSeriesDataPointState
+} from 'app/entities/time-series-data-point/time-series-data-point.reducer';
+// prettier-ignore
+import timeSeries, {
+  TimeSeriesState
+} from 'app/entities/time-series/time-series.reducer';
+// prettier-ignore
+import employee, {
+  EmployeeState
+} from 'app/entities/employee/employee.reducer';
+// prettier-ignore
+import division, {
+  DivisionState
+} from 'app/entities/division/division.reducer';
+// prettier-ignore
+import department, {
+  DepartmentState
+} from 'app/entities/department/department.reducer';
+// prettier-ignore
+import government, {
+  GovernmentState
+} from 'app/entities/government/government.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +47,12 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly timeSeriesDataPoint: TimeSeriesDataPointState;
+  readonly timeSeries: TimeSeriesState;
+  readonly employee: EmployeeState;
+  readonly division: DivisionState;
+  readonly department: DepartmentState;
+  readonly government: GovernmentState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +67,12 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  timeSeriesDataPoint,
+  timeSeries,
+  employee,
+  division,
+  department,
+  government,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

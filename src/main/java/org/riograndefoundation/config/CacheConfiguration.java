@@ -45,6 +45,19 @@ public class CacheConfiguration {
             createCache(cm, org.riograndefoundation.domain.User.class.getName());
             createCache(cm, org.riograndefoundation.domain.Authority.class.getName());
             createCache(cm, org.riograndefoundation.domain.User.class.getName() + ".authorities");
+            createCache(cm, org.riograndefoundation.domain.TimeSeriesDataPoint.class.getName());
+            createCache(cm, org.riograndefoundation.domain.TimeSeries.class.getName());
+            createCache(cm, org.riograndefoundation.domain.TimeSeries.class.getName() + ".timeSeriesDataPoints");
+            createCache(cm, org.riograndefoundation.domain.Employee.class.getName());
+            createCache(cm, org.riograndefoundation.domain.Employee.class.getName() + ".timeSeries");
+            createCache(cm, org.riograndefoundation.domain.Division.class.getName());
+            createCache(cm, org.riograndefoundation.domain.Division.class.getName() + ".employees");
+            createCache(cm, org.riograndefoundation.domain.Division.class.getName() + ".timeSeries");
+            createCache(cm, org.riograndefoundation.domain.Department.class.getName());
+            createCache(cm, org.riograndefoundation.domain.Department.class.getName() + ".divisions");
+            createCache(cm, org.riograndefoundation.domain.Department.class.getName() + ".timeSeries");
+            createCache(cm, org.riograndefoundation.domain.Government.class.getName());
+            createCache(cm, org.riograndefoundation.domain.Government.class.getName() + ".departments");
             // jhipster-needle-ehcache-add-entry
         };
     }
